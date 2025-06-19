@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom, rgba(195, 197, 196, 0.1), #e8f7ec), url('/assets/credito-de-carbono.png');
+  background-image: linear-gradient(to bottom, rgba(195, 197, 196, 0.1), #e8f7ec), url('assets/credito-de-carbono.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
