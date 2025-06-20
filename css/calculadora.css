@@ -26,16 +26,19 @@ nav {
   background-color: #61d56e;
   padding: 15px 40px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 nav img {
-  height: 120px;
+  height: 100px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
 }
 
 nav a {
@@ -160,4 +163,75 @@ footer a {
 
 footer a:hover {
   color: #205789;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  #calculadora {
+    padding: 30px 20px;
+  }
+
+  #calculadora h2 {
+    font-size: 1.8rem;
+  }
+
+  #calculadora p {
+    font-size: 1rem;
+  }
+
+  #calculadora input[type="number"],
+  #calculadora button[type="submit"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  #resultado {
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav img {
+    height: 80px;
+  }
+
+  #calculadora {
+    padding: 25px 15px;
+    border-radius: 30px;
+  }
+
+  #calculadora h2 {
+    font-size: 1.6rem;
+  }
+
+  #resultado {
+    font-size: 1rem;
+    padding: 15px;
+  }
 }
