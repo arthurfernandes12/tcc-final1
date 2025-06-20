@@ -17,6 +17,4 @@
 - HTML5
 - CSS3
 - JavaScript
-- React.js
-- Node.js
-- Figma (para prototipagem)
+- Penpot (Para prototipagem)
