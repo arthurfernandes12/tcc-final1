@@ -27,10 +27,26 @@ nav {
   padding: 15px 40px;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
 }
 
-nav img {
+nav .logo img {
   height: 100px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
 }
 
 nav ul {
@@ -166,22 +182,37 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  .menu-toggle {
+    display: flex;
   }
 
   nav ul {
-    justify-content: flex-start;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    background-color: #61d56e;
+    height: calc(100% - 100px);
+    width: 250px;
     flex-direction: column;
-    width: 100%;
-    padding-left: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 30px 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  nav ul.active {
+    transform: translateX(0);
+  }
+
+  nav ul li {
+    margin-bottom: 20px;
   }
 
   nav a {
     display: block;
     width: 100%;
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   #calculadora {
@@ -217,7 +248,7 @@ footer a:hover {
     padding: 10px 20px;
   }
 
-  nav img {
+  nav .logo img {
     height: 80px;
   }
 
