@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="/tcc-final/assets/CarbonXLogo2.png" type="image/x-icon" />
-  <link rel="stylesheet" href="/tcc-final/css/calculadora.css" />
-  <script src="/tcc-final/js/menu.js" defer></script>
-  <script src="/tcc-final/js/calculadora.js" defer></script>
-  <title>Calculadora de Carbono</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="/tcc-final/assets/CarbonXLogo2.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="/tcc-final/css/calculadora.css" />
+    <script src="/tcc-final/js/menu.js" defer></script>
+    <script src="/tcc-final/js/calculadora.js" defer></script>
+    <title>Calculadora de Carbono</title>
+  </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="/tcc-final/index.html">
-        <img src="/tcc-final/assets/CarbonXLogo.png" alt="Logo da empresa CarbonX" />
-      </a>
-      <ul>
-        <li><a href="/tcc-final/pages/sobre.html">Sobre</a></li>
-        <li><a href="/tcc-final/pages/servicos.html">Serviços</a></li>
-        <li><a href="#" aria-current="page">Calculadora</a></li>
-        <li><a href="/tcc-final/pages/contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/tcc-final/index.html"><img
+              src="/tcc-final/assets/CarbonXLogo.png"
+              alt="Logo CarbonX"></a>
+        </div>
 
-  <main>
-    <section id="calculadora">
-      <h2>Calculadora de carbono</h2>
-      <p>Descubra a sua pegada de carbono estimada e saiba quantos créditos seriam necessários para compensá-la.</p>
-      <form id="form-calculadora" novalidate>
-        <label for="energia">Consumo mensal de energia (kWh):</label>
-        <input type="number" id="energia" name="energia" min="0" required aria-required="true" />
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-        <label for="transporte">Distância mensal de carro (km):</label>
-        <input type="number" id="transporte" name="transporte" min="0" required aria-required="true" />
+        <ul class="menu" id="menu">
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="calculadora.html" class="active">Calculadora</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <button type="submit">Calcular</button>
-      </form>
+    <main>
+      <section id="calculadora">
+        <h2>Calculadora de carbono</h2>
+        <p>Descubra a sua pegada de carbono estimada e saiba quantos créditos
+          seriam necessários para compensá-la.</p>
+        <form id="form-calculadora" novalidate>
+          <label for="energia">Consumo mensal de energia (kWh):</label>
+          <input type="number" id="energia" name="energia" min="0" required
+            aria-required="true" />
 
-      <div id="resultado" role="region" aria-live="polite" aria-atomic="true"></div>
-    </section>
-  </main>
+          <label for="transporte">Distância mensal de carro (km):</label>
+          <input type="number" id="transporte" name="transporte" min="0"
+            required aria-required="true" />
 
-  <footer></footer>
-</body>
+          <button type="submit">Calcular</button>
+        </form>
+
+        <div id="resultado" role="region" aria-live="polite"
+          aria-atomic="true"></div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
 </html>
