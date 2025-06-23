@@ -33,7 +33,7 @@ nav {
 }
 
 .logo img {
-  height: 80px;
+  height: 100px;
   width: auto;
   display: block;
 }
@@ -54,12 +54,12 @@ nav a {
   border-radius: 5px;
 }
 
-nav a:hover {
+.menu li a:hover {
   background-color: #2b9d38;
   color: #fff;
 }
 
-nav a.active {
+.menu li a.active {
   background-color: #205789;
   color: #fff;
 }
